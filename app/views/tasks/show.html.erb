@@ -1,0 +1,26 @@
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1><%= @task.title %></h1>
+
+  <div class="details">
+    <p><%= @task.details %></p>
+  </div>
+
+  <% if @task.completed %>
+    <i class="far fa-check-square"></i> This task is completed
+  <% else %>
+    <i class="far fa-square"></i> This task is not completed
+  <% end %>
+
+  <br><br><br>
+
+  <%= link_to 'Edit task', edit_path %>
+
+  <br><br>
+
+  <%= link_to 'Back to list', tasks_path %>
+
+</body>
